@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Multithreading Rechner</title>
+    <style media="screen">
+      .standard {
+        font-family: Calibri;
+      }
+	  .underline:hover {
+		text-decoration: underline;
+	  }
+	  .cursor:hover {
+		cursor: pointer;
+	  }
+    </style>
+    <script src="mainthread.js" charset="utf-8"></script>
+    <script src="worker-rechner.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1 class="standard"><span id="aufgabe"></span><span id="ergebnis">Ergebnis</span></h1>
+    <h2 class="standard underline cursor" onclick="calc()">Klicke zum Berechnen</h2>
+    <input type="number" name="zahl1" id="zahl1">
+    <select class="cursor" id="operation">
+      <option value="default"></option>
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" name="zahl2" id="zahl2">
+    <h2 class="standard cursor underline" onclick="endWorker()">Worker beenden</h2>
+    <p class="standard">-&rsaquo; Die Konsole öffnen um den Ablauf zu verfolgen (F12 -&rsaquo; Console -&rsaquo; aktualisieren)<br>
+    -&rsaquo; Bei Fehlern im Internet Explorer öffnen und Zugriff auf blockierte Dateien erlauben</p>
+  </body>
+</html>
